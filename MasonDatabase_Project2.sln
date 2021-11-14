@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasonDatabase_Project2", "MasonDatabase_Project2\MasonDatabase_Project2.csproj", "{C47F382E-3E89-46A8-A609-AFA7CBACCCE9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C47F382E-3E89-46A8-A609-AFA7CBACCCE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C47F382E-3E89-46A8-A609-AFA7CBACCCE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C47F382E-3E89-46A8-A609-AFA7CBACCCE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C47F382E-3E89-46A8-A609-AFA7CBACCCE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54FD3908-001F-4DC4-8A2B-6FBFC6063509}
+	EndGlobalSection
+EndGlobal
