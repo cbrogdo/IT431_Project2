@@ -41,7 +41,9 @@ namespace MasonDatabase_Project2.Models
         [Required]
         //[RegularExpression(@"^[a-z,A-Z,@,.,_]*$", ErrorMessage = "Invalid Email Address")]
         //[RegularExpression(@"^[a - z, A - Z,., _] *$[@] [a-z]*$[.] [a-z]", ErrorMessage = "Invalid Email Address")]
-        [RegularExpression(@"^[a - z, A - Z,., _] *[@][a - z] *[.][a - z]3$")]
+        //[RegularExpression(@"^[a - z, A - Z,., _] *[@][a - z] *[.][a - z]3$")]
+        [RegularExpression(@"^(([^<>()[\]\\.,;:\s@""]+(\.[^<>()[\]\\.,;:\s@""]+)*)|("".+""))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$", ErrorMessage ="Please enter a valid email address")]
+        [EmailAddress(ErrorMessage = "Please enter a valid Email address")]
 
         [Display(Name = "Email Address")]
         public string EmailAddress { get; set; }
@@ -78,7 +80,9 @@ namespace MasonDatabase_Project2.Models
 
         [Required]
         [MaxLength(5, ErrorMessage = "Must be exactly 5 numbers") ]
-        [RegularExpression(@"^[0-9]*$", ErrorMessage ="Must contain only numbers")]
+        //[RegularExpression(@"^[0-9]*$", ErrorMessage = "Zip Codes must be 5 digits and can only contain numbers")]
+        [RegularExpression(@"^\d{5}(-\d{4})?$", ErrorMessage = "Invalid Zip Code - Zip Codes must be 5 digits and can only contain numbers")]
+        [Display(Name = "Zip Code")]
 
         public string ZipCode { get; set; }
 
@@ -111,13 +115,14 @@ namespace MasonDatabase_Project2.Models
         public int GPA { get; set; }
 
         [Required]
-        [RegularExpression(@"^[0 - 800]*$", ErrorMessage = "Must be between 0 and 800")]
+        //[RegularExpression("^[0 - 800]*$", ErrorMessage = "Must be between 0 and 800")]
+        [Range(0, 800, ErrorMessage = "Must be between 0 and 800")]
         [Display(Name ="SAT Math Score")]
         public int SATMath { get; set; }
 
         [Required]
-        [RegularExpression(@"[0-8]$|^ [0-9] [0-9]$|^(800)$", ErrorMessage = "Must be between 0 and 800")]
-      
+        //[RegularExpression(@"[0-8]$|^ [0-9] [0-9]$|^(800)$", ErrorMessage = "Must be between 0 and 800")]
+        [Range(0, 800, ErrorMessage = "Must be between 0 and 800")]
         [Display(Name = "SAT Verbal Score")]
         public int SATVerbal { get; set; }
 
@@ -133,7 +138,8 @@ namespace MasonDatabase_Project2.Models
         
         [Display(Name ="Prospective Enrollment Year")]
         //[RegularExpression(@"^\d{4}[2022 - 2999]", ErrorMessage = "Cannot be prior to 2022 or after 2999")]
-        [RegularExpression("([2][0-9][0-9][0-9])", ErrorMessage = "Cannot be prior to 2022 or after 2999")]
+        //[RegularExpression("([2][0-9][0-9][0-9])", ErrorMessage = "Cannot be prior to 2022 or after 2999")]
+        [Range(2022, 2999, ErrorMessage = "Cannot be prior to 2022 or after 2999")]
         public int EnrollYear { get; set; }
 
     }
