@@ -11,12 +11,16 @@ namespace MasonDatabase_Project2.Models
         [Required]
         public int ID { get; set; }
 
+       
+
+
         [Required]
         [MaxLength(50, ErrorMessage = "Must be less than 50 characters")]
         [RegularExpression(@"^[a-z,A-Z, ]*$", ErrorMessage = "First Name must contain only letters or a space")]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
-        
+
+     
         [Required]
         [MaxLength(25, ErrorMessage = "Must be less than 25 characters")]
         [RegularExpression(@"^[a-z,A-Z, ]*$", ErrorMessage = "Middle Name must contain only letters or a space")]
@@ -33,16 +37,13 @@ namespace MasonDatabase_Project2.Models
         [MaxLength(11, ErrorMessage = "Must be exactly 11 characters")]
         [MinLength(11, ErrorMessage = "Must be exactly 11 characters")]
         [RegularExpression(@"^\d{9}|\d{3}-\d{2}-\d{4}$", ErrorMessage = "Invalid Social Security Number")]
-        // [RegularExpression(@"[1-9]{1}\d{2}-\d{2}-\d{4}$", ErrorMessage = "Invalid Social Security Number")]
         [Display(Name = "Social Security Number (123-45-6789)")]
 
         public string  SSN { get; set; }
 
         [Required]
-        //[RegularExpression(@"^[a-z,A-Z,@,.,_]*$", ErrorMessage = "Invalid Email Address")]
-        //[RegularExpression(@"^[a - z, A - Z,., _] *$[@] [a-z]*$[.] [a-z]", ErrorMessage = "Invalid Email Address")]
-        //[RegularExpression(@"^[a - z, A - Z,., _] *[@][a - z] *[.][a - z]3$")]
-        [RegularExpression(@"^(([^<>()[\]\\.,;:\s@""]+(\.[^<>()[\]\\.,;:\s@""]+)*)|("".+""))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$", ErrorMessage ="Please enter a valid email address")]
+        [RegularExpression("[a-zA-Z0-9._-]+@[a-z]+(\\.)[a-z]{2,3}", ErrorMessage = "Please enter a valid email address")]
+        //[RegularExpression(@"^(([^<>()[\]\\.,;:\s@""]+(\.[^<>()[\]\\.,;:\s@""]+)*)|("".+""))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$", ErrorMessage ="Please enter a valid email address")]
         [EmailAddress(ErrorMessage = "Please enter a valid Email address")]
 
         [Display(Name = "Email Address")]
@@ -52,14 +53,12 @@ namespace MasonDatabase_Project2.Models
         [MaxLength(20, ErrorMessage = "Must be less than 20 characters")]
         [MinLength(12, ErrorMessage = "Must be 12 or more characters")]
         [RegularExpression(@"^\d{10}|\d{3}-\d{3}-\d{4}$", ErrorMessage = "Invalid Phone Number")]
-        // [RegularExpression(@"[1-9]{1}\d{3}-\d{3}-\d{4}$", ErrorMessage = "Invalid Phone Number")]
         [Display(Name = "Home Phone Number (123-456-7890)")]
         public string HomePhone { get; set; }
         [Required]
         [MaxLength(20, ErrorMessage = "Must be less than 20 characters")]
         [MinLength(12, ErrorMessage = "Must be 12 or more characters")]
         [RegularExpression(@"^\d{10}|\d{3}-\d{3}-\d{4}$", ErrorMessage = "Invalid Phone Number")]
-        // [RegularExpression(@"[1-9]{1}\d{3}-\d{3}-\d{4}$", ErrorMessage = "Invalid Phone Number")]
         [Display(Name = "Cell Phone Number (123-456-7890)")]
         public string CellPhone { get; set; }
 
@@ -80,7 +79,6 @@ namespace MasonDatabase_Project2.Models
 
         [Required]
         [MaxLength(5, ErrorMessage = "Must be exactly 5 numbers") ]
-        //[RegularExpression(@"^[0-9]*$", ErrorMessage = "Zip Codes must be 5 digits and can only contain numbers")]
         [RegularExpression(@"^\d{5}(-\d{4})?$", ErrorMessage = "Invalid Zip Code - Zip Codes must be 5 digits and can only contain numbers")]
         [Display(Name = "Zip Code")]
 
@@ -109,36 +107,35 @@ namespace MasonDatabase_Project2.Models
         public DateTime GradDate { get; set; }
 
         [Required]
-       // [RegularExpression(@"^[0 - 4]\.\d{2}$/")]
-        [RegularExpression(@"[0-4]*(.[0-9][0-9]*)?$", ErrorMessage = "GPA must be between 0.0 to 4.0")]
+        [Range(0, 4.9, ErrorMessage = "GPA must be between 0.0 to 4.0")]
+        //[RegularExpression(@"[0-4]*(.[0-9][0-9]*)?$", ErrorMessage = "GPA must be between 0.0 to 4.0")]
         //Sliding Scale??
-        public int GPA { get; set; }
+        public decimal GPA { get; set; }
 
         [Required]
-        //[RegularExpression("^[0 - 800]*$", ErrorMessage = "Must be between 0 and 800")]
+        //[RegularExpression(“[0-7][0-9]{0,2}|800”, ErrorMessage = "Must be between 0 and 800")]
         [Range(0, 800, ErrorMessage = "Must be between 0 and 800")]
         [Display(Name ="SAT Math Score")]
         public int SATMath { get; set; }
 
         [Required]
-        //[RegularExpression(@"[0-8]$|^ [0-9] [0-9]$|^(800)$", ErrorMessage = "Must be between 0 and 800")]
         [Range(0, 800, ErrorMessage = "Must be between 0 and 800")]
         [Display(Name = "SAT Verbal Score")]
         public int SATVerbal { get; set; }
 
         [Required]
+        //Drop down list
         [Display(Name = "Primary Area of Interest (Major)")]
         public string[] Major { get; set; }
 
         [Required]
+        //drop down list
         [Display(Name = "Prospective Enrollment Semester ")]
         public string EnrollSem { get; set; }
 
         [Required]
         
         [Display(Name ="Prospective Enrollment Year")]
-        //[RegularExpression(@"^\d{4}[2022 - 2999]", ErrorMessage = "Cannot be prior to 2022 or after 2999")]
-        //[RegularExpression("([2][0-9][0-9][0-9])", ErrorMessage = "Cannot be prior to 2022 or after 2999")]
         [Range(2022, 2999, ErrorMessage = "Cannot be prior to 2022 or after 2999")]
         public int EnrollYear { get; set; }
 

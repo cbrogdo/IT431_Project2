@@ -17,7 +17,7 @@ namespace MasonDatabase_Project2.Models
     
         public MasonDatabase_Project2Context() : base("name=MasonDatabase_Project2Context")
         {
-            Database.SetInitializer<MasonDatabase_Project2Context>(new DropCreateDatabaseIfModelChanges<MasonDatabase_Project2Context>());
+            Database.SetInitializer<MasonDatabase_Project2Context>(new DropCreateDatabaseAlways<MasonDatabase_Project2Context>());
 
         }
 
