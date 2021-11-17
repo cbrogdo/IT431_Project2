@@ -148,8 +148,5 @@ namespace MasonDatabase.Models
         [Required]
         public DateTime SubmitDate { get; set; }
 
-        public int?ListID { get; set; }
-        public virtual List List { get; set; }
-
     }
 }
