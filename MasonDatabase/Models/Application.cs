@@ -145,5 +145,11 @@ namespace MasonDatabase.Models
         [Range(2022, 2999, ErrorMessage = "Cannot be prior to 2022 or after 2999")]
         public int EnrollYear { get; set; }
 
+        [Required]
+        public DateTime SubmitDate { get; set; }
+
+        public int?ListID { get; set; }
+        public virtual List List { get; set; }
+
     }
 }
