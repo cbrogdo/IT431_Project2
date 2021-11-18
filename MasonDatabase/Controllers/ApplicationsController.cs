@@ -87,7 +87,7 @@ namespace MasonDatabase.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,FirstName,MiddleName,LastName,SSN,EmailAddress,HomePhone,CellPhone,Street,City,State,ZipCode,DOB,Gender,SchoolName,SchoolCity,GradDate,GPA,SATMath,SATVerbal,MajorID,EnrollSem,EnrollYear")] Application application)
+        public ActionResult Edit([Bind(Include = "ID,FirstName,MiddleName,LastName,SSN,EmailAddress,HomePhone,CellPhone,Street,City,State,ZipCode,DOB,Gender,SchoolName,SchoolCity,GradDate,GPA,SATMath,SATVerbal,MajorID,SemesterID,EnrollYear")] Application application)
         {
             if (ModelState.IsValid)
             {

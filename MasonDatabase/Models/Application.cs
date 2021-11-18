@@ -86,6 +86,8 @@ namespace MasonDatabase.Models
 
         [Required]
         [Display(Name = "Date of Birth")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        //[DataType(DataType.Date)]
         public DateTime DOB { get; set; }
 
 
@@ -107,6 +109,8 @@ namespace MasonDatabase.Models
 
         [Required]
         [Display(Name = "High School Graduation Date")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        //[DataType(DataType.Date)]
         public DateTime GradDate { get; set; }
 
 
