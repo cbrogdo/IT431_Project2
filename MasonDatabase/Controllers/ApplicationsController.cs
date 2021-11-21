@@ -57,7 +57,7 @@ namespace MasonDatabase.Controllers
             {
                 db.Applications.Add(application);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("ApplicationReceived", "Home");
             }
 
             ViewBag.MajorID = new SelectList(db.Majors, "ID", "MajorOption", application.MajorID);

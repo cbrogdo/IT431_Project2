@@ -303,6 +303,7 @@
     <Content Include="Views\Applications\Edit.cshtml" />
     <Content Include="Views\Applications\Index.cshtml" />
     <Content Include="Views\DatePicker\Index.cshtml" />
+    <Content Include="Views\Home\ApplicationReceived.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
