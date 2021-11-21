@@ -22,3 +22,12 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.goldHeader {
+    display: block;
+    font-size: 1em;
+    font-family: inherit;
+    font-size: large;
+    font-weight: bold;
+    color: #FFCC33;
+}
