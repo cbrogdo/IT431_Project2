@@ -17,6 +17,22 @@
     @Html.HiddenFor(model => model.ID)
     @Html.HiddenFor(model => model.SubmitDate)
 
+    <!--Hidden Fields Not Used-->
+    @Html.HiddenFor(model => model.EmailAddress)
+    @Html.HiddenFor(model => model.HomePhone)
+    @Html.HiddenFor(model => model.CellPhone)
+    @Html.HiddenFor(model => model.Street)
+    @Html.HiddenFor(model => model.City)
+    @Html.HiddenFor(model => model.State)
+    @Html.HiddenFor(model => model.ZipCode)
+    @Html.HiddenFor(model => model.DOB)
+    @Html.HiddenFor(model => model.Gender)
+    @Html.HiddenFor(model => model.SchoolName)
+    @Html.HiddenFor(model => model.SchoolCity)
+    @Html.HiddenFor(model => model.GradDate)
+    @Html.HiddenFor(model => model.MajorID)
+    @Html.HiddenFor(model => model.SSN)
+
     <div class="form-group">
         @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
@@ -42,17 +58,14 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.SSN, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.SubmitDate, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.SSN, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.SSN, "", new { @class = "text-danger" })
+
+            <!-- @Html.HiddenFor(model => model.SubmitDate, new { htmlAttributes = new { @readonly = "readonly" } })-->
+            @Html.DisplayFor(model => model.SubmitDate)
         </div>
+
     </div>
-
-
-
-
-
 
     <div class="form-group">
         @Html.LabelFor(model => model.GPA, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -98,7 +111,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.EnrollDecision, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-           
+
             @Html.RadioButton("EnrollDecision", "Admit") Admit
             <br />
             @Html.RadioButton("EnrollDecision", "Reject") Reject
@@ -108,16 +121,8 @@
         </div>
     </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.SubmitDate, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
 
-            <!-- @Html.HiddenFor(model => model.SubmitDate, new { htmlAttributes = new { @readonly = "readonly" } })-->
-           @Html.DisplayFor(model => model.SubmitDate)
-        </div>
 
-    </div>
-    
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">

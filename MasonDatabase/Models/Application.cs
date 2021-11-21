@@ -158,5 +158,32 @@ namespace MasonDatabase.Models
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime SubmitDate { get; set; }
 
+        [Display(Name = "Enrollment Semester/Year")]
+        public string ConcatEnroll
+        {
+            get
+            {
+                return Semester.EnrollSem + ", " + EnrollYear;
+            }
+        }
+
+        [Display(Name ="Full Name")]
+        public string ConcatName
+        {
+            get
+            {
+                return FirstName + " " + MiddleName + " " + LastName;
+            }
+        }
+        
+        [Display(Name = "Combined SAT Score")]
+        public int ConcatSAT
+        {
+            get
+            {
+                return SATMath + SATVerbal;
+            }
+        }
+
     }
 }

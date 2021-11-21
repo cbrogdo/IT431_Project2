@@ -305,7 +305,6 @@
     <Content Include="Views\Applications\Index.cshtml" />
     <Content Include="Views\DatePicker\Index.cshtml" />
     <Content Include="Views\Home\ApplicationReceived.cshtml" />
-    <Content Include="Views\ManageApplicants\Create.cshtml" />
     <Content Include="Views\ManageApplicants\Delete.cshtml" />
     <Content Include="Views\ManageApplicants\Details.cshtml" />
     <Content Include="Views\ManageApplicants\Edit.cshtml" />
