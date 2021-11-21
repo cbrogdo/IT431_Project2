@@ -172,6 +172,7 @@
     <Compile Include="Controllers\DatePickerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MajorsController.cs" />
+    <Compile Include="Controllers\ManageApplicantsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SemestersController.cs" />
     <Compile Include="Global.asax.cs">
@@ -304,6 +305,11 @@
     <Content Include="Views\Applications\Index.cshtml" />
     <Content Include="Views\DatePicker\Index.cshtml" />
     <Content Include="Views\Home\ApplicationReceived.cshtml" />
+    <Content Include="Views\ManageApplicants\Create.cshtml" />
+    <Content Include="Views\ManageApplicants\Delete.cshtml" />
+    <Content Include="Views\ManageApplicants\Details.cshtml" />
+    <Content Include="Views\ManageApplicants\Edit.cshtml" />
+    <Content Include="Views\ManageApplicants\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

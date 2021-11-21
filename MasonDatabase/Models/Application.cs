@@ -149,12 +149,13 @@ namespace MasonDatabase.Models
         [Range(2022, 2999, ErrorMessage = "Cannot be prior to 2022 or after 2999")]
         public int EnrollYear { get; set; }
 
-        
+       
         [Display(Name = "Enrollment Decision")]
         public string EnrollDecision { get; set; }
 
 
         [Required]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime SubmitDate { get; set; }
 
     }

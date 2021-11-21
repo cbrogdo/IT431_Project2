@@ -1,0 +1,109 @@
+﻿@model MasonDatabase.Models.Application
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Application</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SSN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SSN)
+        </dd>
+
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.GPA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GPA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SATMath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SATMath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SATVerbal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SATVerbal)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Semester.EnrollSem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Semester.EnrollSem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnrollYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnrollYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnrollDecision)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnrollDecision)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubmitDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubmitDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
