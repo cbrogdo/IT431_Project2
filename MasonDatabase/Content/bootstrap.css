@@ -6832,3 +6832,10 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+.goldFooter {
+    display: block;
+    font-family: inherit;
+    font-size: large;
+    font-weight: bold;
+    color: #FFCC33;
+}
