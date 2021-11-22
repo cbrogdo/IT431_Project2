@@ -310,6 +310,7 @@
     <Content Include="Views\ManageApplicants\Details.cshtml" />
     <Content Include="Views\ManageApplicants\Edit.cshtml" />
     <Content Include="Views\ManageApplicants\Index.cshtml" />
+    <Content Include="Views\Home\Rejected.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

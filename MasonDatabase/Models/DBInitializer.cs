@@ -11,11 +11,10 @@ namespace MasonDatabase.Models
         protected override void Seed(ApplicationsContext context)
         {
             IList<Major> defaultMajor = new List<Major>();
-            defaultMajor.Add(new Major() { MajorOption = "-Select a major-" });
+            defaultMajor.Add(new Major() { MajorOption = "--Select a major--" });
             defaultMajor.Add(new Major() { MajorOption = "Anthropology" });
             defaultMajor.Add(new Major() { MajorOption = "Applied Computer Science" });
             defaultMajor.Add(new Major() { MajorOption = "Applied Science" });
-            defaultMajor.Add(new Major() { MajorOption = "Art and Visual Technology" });
             defaultMajor.Add(new Major() { MajorOption = "Art and Visual Technology" });
             defaultMajor.Add(new Major() { MajorOption = "Art History" });
             defaultMajor.Add(new Major() { MajorOption = "Astronomy" });
@@ -85,7 +84,7 @@ namespace MasonDatabase.Models
 
 
             IList<Semester> defaultSemester = new List<Semester>();
-            defaultSemester.Add(new Semester() { EnrollSem = "-Select a semester-" });
+            defaultSemester.Add(new Semester() { EnrollSem = "--Select a semester--" });
             defaultSemester.Add(new Semester() { EnrollSem = "Fall" });
             defaultSemester.Add(new Semester() { EnrollSem = "Spring" });
             defaultSemester.Add(new Semester() { EnrollSem = "Summer" });
