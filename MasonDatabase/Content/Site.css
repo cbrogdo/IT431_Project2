@@ -76,7 +76,7 @@ textarea {
 .navbar {
     background-color: rgb(30, 98, 56);
     border-radius: 5px;
-    margin-top: 5px;
+    margin-top: 2px;
     margin-bottom: 5px;
     padding: 0px 5px;
 }
@@ -95,6 +95,7 @@ textarea {
 
 .navbar a {
     color: #FFCC33;
+    
 }
 .nav li, .navbar-form .form-group {
     display: inline-block;
@@ -102,6 +103,7 @@ textarea {
 
 .nav li {
     padding: 5px;
+    color: #FFCC33
 }
 
 .navbar-toggle {
@@ -121,6 +123,7 @@ textarea {
     font-weight: bold;
     background-color: rgb(30, 98, 56);
     border: 1px solid rgb(30, 98, 56); /*rgb(109, 139, 237);*/
+    color: #FFCC33;
     border-radius: 3px;
     padding: 5px 5px;
     max-width: 225px;
@@ -133,8 +136,8 @@ textarea {
 
     .nav li a:hover {
         background-color: rgb(226, 168, 43);
-        border: 1px solid rgb(226, 168, 43);
-        color: black;
+        border: 2px solid rgb(226, 168, 43);
+        color: #FFCC33;
         /*rgb(138, 125, 227);*/
         transform: scale(1.2);
         text-decoration: none;

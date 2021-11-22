@@ -244,6 +244,7 @@
     <Content Include="Images\GMU_logo_green.jpg" />
     <Content Include="Images\GMU_main_page.jpg" />
     <Content Include="Images\GMU_PLogo_KO+Gold.png" />
+    <Content Include="Images\GMU_PLogo_KO_Gold.png" />
     <Content Include="Images\MasonM_KO.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
