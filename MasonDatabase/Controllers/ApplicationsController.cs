@@ -55,7 +55,23 @@ namespace MasonDatabase.Controllers
         {
             if (ModelState.IsValid)
             {
+                
+                Application matchingSSN = db.Applications.Where(cm => string.Compare(cm.SSN, application.SSN, true) == 0).FirstOrDefault();
+
+                if (application == null) 
+                {
+                    return HttpNotFound();
+                }
+
+                if (matchingSSN != null)
+                {
+                    ModelState.AddModelError("SSN", "Social Security Number must be unique.");
+                    return View(application);
+                }
+                
+                
                 application.SubmitDate = DateTime.Now;
+                
                 db.Applications.Add(application);
                 db.SaveChanges();
                 return RedirectToAction("ApplicationReceived", "Home");
@@ -63,6 +79,7 @@ namespace MasonDatabase.Controllers
 
             ViewBag.MajorID = new SelectList(db.Majors, "ID", "MajorOption", application.MajorID);
             ViewBag.SemesterID = new SelectList(db.Semesters, "ID", "EnrollSem", application.SemesterID);
+
             return View(application);
         }
 
