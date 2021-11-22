@@ -15,9 +15,14 @@ namespace MasonDatabase.Controllers
         private ApplicationsContext db = new ApplicationsContext();
 
         // GET: ManageApplicants
-        public ActionResult Index()
+        public ActionResult Index(string search)
         {
             var applications = db.Applications.Include(a => a.Semester);
+            if (!String.IsNullOrEmpty(search))
+            {
+                applications = applications.Where(p => p.SSN.Contains(search) || p.LastName.Contains(search));
+
+            }
             return View(applications.ToList());
         }
 

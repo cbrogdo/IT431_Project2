@@ -7,6 +7,14 @@
 <h2>Index</h2>
 
 
+@using(Html.BeginForm("Index", "ManageApplicants", FormMethod.Get, new {@class = "col-md-2"}))
+            {
+                <div class="form-group">
+                    @Html.TextBox("Search", null, new { @class = "form-control", placeholder="Search Applications by Last Name or SSN" })
+                </div>
+                <button type="submit" class="btn btn-sm">Search</button>
+            }
+
 <table class="table">
     <tr>
 
