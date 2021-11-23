@@ -27,9 +27,17 @@ namespace MasonDatabase.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Rejected()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Your Application has been Denied.";
+
+            return View();
+        }
+
+
+        public ActionResult Academics()
+        {
+            ViewBag.Message = "Academics";
 
             return View();
         }

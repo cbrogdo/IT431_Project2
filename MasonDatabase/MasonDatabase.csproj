@@ -239,12 +239,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\academics.jpg" />
     <Content Include="Images\GMU_green_M.jpg" />
     <Content Include="Images\gmu_logo.jpg" />
     <Content Include="Images\GMU_logo_green.jpg" />
     <Content Include="Images\GMU_main_page.jpg" />
     <Content Include="Images\GMU_PLogo_KO+Gold.png" />
     <Content Include="Images\GMU_PLogo_KO_Gold.png" />
+    <Content Include="Images\GMU_statue.jpg" />
     <Content Include="Images\MasonM_KO.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -318,6 +320,7 @@
     <Content Include="Views\ManageApplicants\Index.cshtml" />
     <Content Include="Views\Home\Rejected.cshtml" />
     <Content Include="Views\Home\RejectedPage.cshtml" />
+    <Content Include="Views\Home\Academics.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -27,7 +27,8 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Application", "Index", "Applications")</li>
+                    <li>@Html.ActionLink("Academics", "Academics", "Home")</li>
+                    <li>@Html.ActionLink("Apply Now", "Create", "Applications")</li>
                     <li>@Html.ActionLink("Manage App", "Index", "ManageApplicants")</li>
 
                     <!--<li>@Html.ActionLink("List", "List", "Applications")</li>-->
@@ -44,12 +45,13 @@
 
            
             <div id="footer_text">
-                <img src="~/images/MasonM_KO.png" width="142" height="150" alt="GMU Logo" class="left" />
+                <img src="~/images/MasonM_KO.png" width="103" height="110" alt="GMU Logo" class="left" />
                 <p class="goldFooter"><strong>PATRIOTS BRAVE &amp; BOLD</strong></p>
 
-
-                <p> George Mason University <br /> 4400 University Drive <br /> Fairfax, Virginia 22030 <br /> Tel: 1(703)993-3100</p>
-                <p>&copy; @DateTime.Now.Year - George Mason University</p>
+                <div class="footer_p">
+                    <p class="footer"> George Mason University <br /> 4400 University Drive <br /> Fairfax, Virginia 22030 <br /> Tel: 1(703)993-3100</p>
+                    <p class="footer">&copy; @DateTime.Now.Year - George Mason University</p>
+                </div>
             </div>
         </footer>
     </div>
