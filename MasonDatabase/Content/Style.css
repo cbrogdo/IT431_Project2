@@ -1625,3 +1625,58 @@ a.btn, .btn {
 
 
 
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    list-style: none;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+}
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+.dropdown-menu {
+    background: -webkit-gradient(linear, left top, left 25, from(#E17D7B), color-stop(4%, #390E0D), to(#E17D7B));
+    background: -moz-linear-gradient(top, #E17D7B, #390E0D 1px, #E17D7B 25px);
+    color: white;
+}
+
+.dropdown-menu li > a {
+    color: #fff;
+}
+
+.dropdown-menu > li {
+    background: #D9534F;
+    border-bottom: 1px solid #791C1A;
+    border-left: 2px solid #791C1A;
+    border-right: 2px solid #791C1A;
+}
+
+.dropdown-menu li > a:hover {
+    background: #D9534F;
+}
+
+.dropdown-menu > li > .divider {
+    background-color: #D9534F;
+    border: 10px solid #791C1A;
+}

@@ -31,7 +31,6 @@
 }
 .ui-helper-clearfix:before,
 .ui-helper-clearfix:after {
-.ui-helper-clearfix:after {
 	content: "";
 	display: table;
 	border-collapse: collapse;
@@ -317,7 +316,7 @@ button.ui-button::-moz-focus-inner {
 	width: 17em;
 	padding: .2em .2em 0;
 	display: none;
-	background-color: black;
+	color: #006633;
 }
 .ui-datepicker .ui-datepicker-header {
 	position: relative;
@@ -368,30 +367,35 @@ button.ui-button::-moz-focus-inner {
 .ui-datepicker select.ui-datepicker-year {
 	width: 45%;
 }
-.ui-datepicker table {
-	width: 100%;
-	font-size: .9em;
-	border-collapse: collapse;
-	margin: 0 0 .4em;
-	background-color: black;
-	
-}
-.ui-datepicker th {
-	padding: .7em .3em;
-	text-align: center;
-	font-weight: bold;
-	border: 1px;
-}
-.ui-datepicker td {
-	border: 1px;
-	padding: 1px;
-}
+	.ui-datepicker table {
+		width: 100%;
+		font-size: .9em;
+		border-collapse: collapse;
+		margin: 0 0 .4em;
+		background-color: white;
+	}
+
+	.ui-datepicker th {
+		padding: .7em .3em;
+		text-align: center;
+		font-weight: bold;
+		border: 0;
+		color: #006633;
+	}
+
+	.ui-datepicker td {
+		border: 0;
+		padding: 1px;
+		color: #006633
+	}
+
 .ui-datepicker td span,
 .ui-datepicker td a {
 	display: block;
 	padding: .2em;
 	text-align: right;
 	text-decoration: none;
+	color: #006633;
 }
 .ui-datepicker .ui-datepicker-buttonpane {
 	background-image: none;
