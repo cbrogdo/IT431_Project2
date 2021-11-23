@@ -41,5 +41,11 @@ namespace MasonDatabase.Controllers
 
             return View();
         }
+        public ActionResult FinancialAid()
+        {
+            ViewBag.Message = "Financial Aid";
+
+            return View();
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MasonDatabase.Models
 {
-    public class DBInitializer : DropCreateDatabaseIfModelChanges<ApplicationsContext>
+    public class DBInitializer : DropCreateDatabaseAlways<ApplicationsContext>
     {
         protected override void Seed(ApplicationsContext context)
         {

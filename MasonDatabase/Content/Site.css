@@ -28,7 +28,7 @@ textarea {
 p.goldFooter {
     display: block;
     font-family: inherit;
-    font-size: x-small;
+    font-size: small;
     font-weight: bold;
     color: #FFCC33;
 }
@@ -74,12 +74,12 @@ p.goldFooter {
 
 h4.green {
     color: rgb(30, 98,56);
-    font-weight: bold;
+    font-weight: normal;
 }
 
 h3.green {
     color: rgb(30, 98,56);
-    font-weight: bold;
+    font-weight: normal;
 }
 
 h2.green {
@@ -93,12 +93,12 @@ h1.green {
 }
 
 p.footer {
-    font-size: xx-small;
+    font-size: x-small;
     color: #FFFFFF;
     
 }
 p.footerTitle {
-    font-size: xx-small;
+    font-size: x-small;
     color: #FFFFFF;
 }
 
@@ -166,9 +166,50 @@ p.footerTitle {
     .nav li a:hover {
         background-color: rgb(226, 168, 43);
         border: 2px solid rgb(226, 168, 43);
-        color: #FFCC33;
+        color: #006633;
         /*rgb(138, 125, 227);*/
         transform: scale(1.2);
         text-decoration: none;
     }
+
+a, a:visited {
+    color: rgb(77, 146, 176);
+    text-decoration: none;
+}
+
+    a:hover {
+        color: rgb(77, 146, 176);
+        text-decoration: underline;
+    }
+
+span > a, span > a:visited, span > a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a.btn-primary, .btn-default, .btn-primary {
+    background-color: rgb(109, 139, 237);
+    border: 1px solid rgb(146, 171, 214);
+    padding: 5px;
+}
+
+    a.btn-primary:hover, .btn-default:hover, .btn-primary:hover {
+        background-color: rgb(138, 125, 227);
+        border: 1px solid rgb(146, 171, 214);
+        padding: 5px;
+    }
+
+a.btn-lg {
+    padding: 10px 16px;
+    font-size: 1.5em;
+}
+
+a.btn, .btn {
+    border-radius: 5px;
+    color: #ffffff;
+    text-decoration: none;
+    border: 2px outset buttonface;
+}
+
+
 

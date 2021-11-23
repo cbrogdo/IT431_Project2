@@ -9,14 +9,12 @@
 @using (Html.BeginForm("Index", "Applications", FormMethod.Get, new { @class = "col-md-2" }))
 {
     <div class="form-group">
-        @Html.TextBox("Search", null, new { @class = "form-control", placeholder = "Search Applications by Last Name or SSN" })
+        @Html.TextBox("Search", null, new { @class = "form-control", placeholder = "Search by Last Name or SSN" })
     </div>
     <button type="submit" class="btn btn-sm">Search</button>
 }
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 <table class="table">
     <tr>
 
@@ -172,9 +170,19 @@
                 @Html.DisplayFor(modelItem => item.SubmitDate)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                <a href="@Url.Action("Edit",  new { id = item.ID })">
+                    <i class="glyphicon glyphicon-pencil" title="Edit" style="color: #006633"></i>
+                    <span class="sr-only"></span> |
+                </a>
+
+                <a href="@Url.Action("Details",  new { id = item.ID })">
+                    <i class="glyphicon glyphicon-list-alt" title="Details" style="color: black"></i>
+                    <span class="sr-only"></span> |
+                </a>
+                <a href="@Url.Action("Delete", null,  new { id = item.ID })">
+                    <i class="glyphicon glyphicon-remove" style="color:red" title="Delete"></i>
+                    <span class="sr-only"></span>
+                </a>
             </td>
         </tr>
     }

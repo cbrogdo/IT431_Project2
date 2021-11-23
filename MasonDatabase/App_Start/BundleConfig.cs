@@ -24,7 +24,7 @@ namespace MasonDatabase
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/Site.css"));
 
             //Create bundel for jQueryUI  
             //js  
@@ -32,7 +32,9 @@ namespace MasonDatabase
                       "~/Scripts/jquery-ui-{version}.js"));
             //css  
             bundles.Add(new StyleBundle("~/Content/cssjqryUi").Include(
-                   "~/Content/jquery-ui.css"));
+                   "~/Content/themes/base/jquery-ui.css"));
+            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/Style.css"));
+
 
         }
     }

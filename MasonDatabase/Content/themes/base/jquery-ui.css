@@ -31,6 +31,7 @@
 }
 .ui-helper-clearfix:before,
 .ui-helper-clearfix:after {
+.ui-helper-clearfix:after {
 	content: "";
 	display: table;
 	border-collapse: collapse;
@@ -316,6 +317,7 @@ button.ui-button::-moz-focus-inner {
 	width: 17em;
 	padding: .2em .2em 0;
 	display: none;
+	background-color: black;
 }
 .ui-datepicker .ui-datepicker-header {
 	position: relative;
@@ -371,15 +373,17 @@ button.ui-button::-moz-focus-inner {
 	font-size: .9em;
 	border-collapse: collapse;
 	margin: 0 0 .4em;
+	background-color: black;
+	
 }
 .ui-datepicker th {
 	padding: .7em .3em;
 	text-align: center;
 	font-weight: bold;
-	border: 0;
+	border: 1px;
 }
 .ui-datepicker td {
-	border: 0;
+	border: 1px;
 	padding: 1px;
 }
 .ui-datepicker td span,

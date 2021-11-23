@@ -15,6 +15,7 @@ namespace MasonDatabase.Controllers
         private ApplicationsContext db = new ApplicationsContext();
 
         // GET: Applications
+        [Authorize]
         public ActionResult Index(string application, string search)
         {
             var applications = db.Applications.Include(a => a.Major);
@@ -32,6 +33,7 @@ namespace MasonDatabase.Controllers
         }
 
         // GET: Applications/Details/5
+        [Authorize]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -104,6 +106,7 @@ namespace MasonDatabase.Controllers
         }
 
         // GET: Applications/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -125,6 +128,7 @@ namespace MasonDatabase.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "ID,FirstName,MiddleName,LastName,SSN,EmailAddress,HomePhone,CellPhone,Street,City,State,ZipCode,DOB,Gender,SchoolName,SchoolCity,GradDate,GPA,SATMath,SATVerbal,MajorID,SemesterID,EnrollYear, EnrollDecision,SubmitDate")] Application application)
         {
 
@@ -166,6 +170,7 @@ namespace MasonDatabase.Controllers
         }
 
         // GET: Applications/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -183,6 +188,7 @@ namespace MasonDatabase.Controllers
         // POST: Applications/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
             Application application = db.Applications.Find(id);
