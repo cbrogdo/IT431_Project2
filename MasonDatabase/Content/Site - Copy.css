@@ -1,0 +1,215 @@
+﻿/*GMU Green:  006633; GMU Gold:  FFCC33 */
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+p.goldFooter {
+    display: block;
+    font-family: inherit;
+    font-size: small;
+    font-weight: bold;
+    color: #FFCC33;
+}
+.h7 {
+    color: #111111;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+/*Graphic Right align CSS */
+
+.left {
+    float: left;
+    margin: 0px;
+}
+
+.right {
+    float: right;
+    margin: 5px 10px 2px 10px;
+
+}
+
+.left:after, .right:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+
+
+
+/*Footer CSS */
+
+#footer_text {
+    clear: both;
+    text-align: right;
+    color: #FFFFFF;
+    background-color: rgb(30, 98,56);
+    border-top: 1px solid #006633;
+    padding: 3px;
+    vertical-align: middle;
+}
+
+h4.green {
+    color: rgb(30, 98,56);
+    font-weight: normal;
+}
+
+h3.green {
+    color: rgb(30, 98,56);
+    font-weight: normal;
+}
+
+h2.green {
+    color: rgb(30, 98,56);
+    font-weight: bold;
+}
+
+h1.green {
+    color: rgb(30, 98,56);
+    font-weight: bold;
+}
+
+p.footer {
+    font-size: x-small;
+    color: #FFFFFF;
+    
+}
+p.footerTitle {
+    font-size: x-small;
+    color: #FFFFFF;
+}
+
+.navbar {
+    background-color: rgb(30, 98, 56);
+    border-radius: 5px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    padding: 0px 5px;
+}
+.navbar-header {
+    float: left;
+    padding: 5px;
+    position: relative;
+}
+.nav {
+    float: left;
+}
+
+.navbar-left {
+    float: left;
+}
+
+.navbar a {
+    color: #FFCC33;
+    
+}
+.nav li, .navbar-form .form-group {
+    display: inline-block;
+}
+
+.nav li {
+    padding: 5px;
+    color: #FFCC33
+}
+
+.navbar-toggle {
+    display: none;
+}
+
+.navbar-collaspe {
+    position: relative;
+}
+.navbar-right {
+    float: right;
+    margin-right: 25px;
+}
+
+.nav li a {
+    display: inline-block;
+    font-weight: bold;
+    background-color: rgb(30, 98, 56);
+    border: 1px solid rgb(30, 98, 56); /*rgb(109, 139, 237);*/
+    color: #FFCC33;
+    border-radius: 3px;
+    padding: 5px 5px;
+    max-width: 225px;
+    -moz-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.7);
+    -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.7);
+    -webkit-transition: ease-in .25s;
+    transition: ease-in .25s;
+}
+
+    .nav li a:hover {
+        background-color: rgb(226, 168, 43);
+        border: 2px solid rgb(226, 168, 43);
+        color: #006633;
+        /*rgb(138, 125, 227);*/
+        transform: scale(1.2);
+        text-decoration: none;
+    }
+
+a, a:visited {
+    color: rgb(77, 146, 176);
+    text-decoration: none;
+}
+
+    a:hover {
+        color: rgb(77, 146, 176);
+        text-decoration: underline;
+    }
+
+span > a, span > a:visited, span > a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a.btn-primary, .btn-default, .btn-primary {
+    background-color: rgb(109, 139, 237);
+    border: 1px solid rgb(146, 171, 214);
+    padding: 5px;
+}
+
+    a.btn-primary:hover, .btn-default:hover, .btn-primary:hover {
+        background-color: rgb(138, 125, 227);
+        border: 1px solid rgb(146, 171, 214);
+        padding: 5px;
+    }
+
+a.btn-lg {
+    padding: 10px 16px;
+    font-size: 1.5em;
+}
+
+a.btn, .btn {
+    border-radius: 5px;
+    color: #ffffff;
+    text-decoration: none;
+    border: 2px outset buttonface;
+}
+
+
+
