@@ -15,52 +15,53 @@
 
 
 
+    <div id="navigation">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <img src="~/images/GMU_PLogo_KO_Gold.png" width="77" height="50" alt="GMU Logo" class="left" />
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <img src="~/images/GMU_PLogo_KO_Gold.png" width="77" height="50" alt="GMU Logo" class="left" />
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--  @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })-->
+                </div>
+                <div class="navbar-collapse collapse">
 
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!--  @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })-->
-            </div>
-            <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
 
-                <ul class="nav navbar-nav">
-
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Academics", "Academics", "Home")</li>
-                    <li>@Html.ActionLink("Apply Now", "Create", "Applications")</li>
-
-
-
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Academics", "Academics", "Home")</li>
+                        <li>@Html.ActionLink("Apply Now", "Create", "Applications")</li>
 
 
 
-            <div id="footer_text">
-                <img src="~/images/MasonM_KO.png" width="103" height="110" alt="GMU Logo" class="left" />
-                <p class="goldFooter"><strong>PATRIOTS BRAVE &amp; BOLD</strong></p>
-
-                <div class="footer_p">
-                    <p class="footer"> George Mason University <br /> 4400 University Drive <br /> Fairfax, Virginia 22030 <br />  <a href="1(703)993-3100"><span class="glyphicon glyphicon-earphone" style="color:white"></span> &nbsp; 1(703)993-3100</a></p>
-                    <p class="footer">&copy; @DateTime.Now.Year - George Mason University</p>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
                 </div>
             </div>
-        </footer>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+
+
+
+                <div id="footer_text">
+                    <img src="~/images/MasonM_KO.png" width="103" height="110" alt="GMU Logo" class="left" />
+                    <p class="goldFooter"><strong>PATRIOTS BRAVE &amp; BOLD</strong></p>
+
+                    <div class="footer_p">
+                        <p class="footer"> George Mason University <br /> 4400 University Drive <br /> Fairfax, Virginia 22030 <br />  <a href="1(703)993-3100"><span class="glyphicon glyphicon-earphone" style="color:white"></span> &nbsp; 1(703)993-3100</a></p>
+                        <p class="footer">&copy; @DateTime.Now.Year - George Mason University</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

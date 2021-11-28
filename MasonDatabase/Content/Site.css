@@ -445,7 +445,7 @@ td {
     position: relative;
 }
 
-.nav {
+.nav, #navigation {
     float: left;
 }
 
@@ -457,11 +457,11 @@ td {
     color: #FFCC33;
 }
 
-.nav li, .navbar-form .form-group {
+.nav li, #navigation li, .navbar-form, .form-group {
     display: inline-block;
 }
 
-.nav li {
+.nav li, #navigation li {
     padding: 5px;
 }
 
@@ -469,7 +469,7 @@ td {
     display: none;
 }
 
-.navbar-collaspe {
+.navbar-collapse {
     position: relative;
 }
 
@@ -495,8 +495,8 @@ td {
     float: right;
     margin-right: 25px;
 }
-
-.nav li a {
+/*add a div that contains the navbar and footer with an id ='navigation'*/
+#navigation li a, .nav li a {
     display: inline-block;
     font-weight: bold;
     background-color: #006633;
@@ -512,7 +512,7 @@ td {
     transition: ease-in .25s;
 }
 
-    .nav li a:hover {
+    #navigation li a:hover, .nav li a:hover {
         background-color: #FFCC33;
         border: 1px solid #FFCC33;
         color: #006633;
@@ -522,11 +522,11 @@ td {
 
 /*Button CSS*/
 
-footer a {
+#navigation footer a, footer a {
     color: #FFCC33;
 }
 
-    footer a:hover {
+    #navigation footer a:hover, footer a:hover {
         color: #FFCC33;
         text-decoration: underline;
     }
@@ -583,7 +583,7 @@ a.btn, .btn {
 }
 
 /*Glypicons*/
-
+/*
 @font-face {
     font-family: "Glyphicons Halflings";
     src: url(../fonts/glyphicons-halflings-regular.eot);
@@ -1712,6 +1712,7 @@ a.btn, .btn {
     }
 
 
+*/
 
 
 

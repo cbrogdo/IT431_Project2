@@ -31,9 +31,10 @@ namespace MasonDatabase
             //css  
             bundles.Add(new StyleBundle("~/Content/cssjqryUi").Include(
                    "~/Content/themes/base/jquery-ui.css"));
+
+            //bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/Style.css"));
             
-           //bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/Style.css"));
-            
+
 
 
         }
