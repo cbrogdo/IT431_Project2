@@ -4,14 +4,31 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
 
-@using (Html.BeginForm("Index", "Applications", FormMethod.Get, new { @class = "col-md-2" }))
+<h2>Submitted Applications</h2>
+
+@using (Html.BeginForm("Index", "Applications", FormMethod.Get, new { @class = "col-md-3" }))
 {
-    <div class="form-group">
-        @Html.TextBox("Search", null, new { @class = "form-control", placeholder = "Search by Last Name or SSN" })
+
+<div class="input-group">
+
+    @Html.TextBox("Search", null, new { @class = "form-control", placeholder = "Last Name or SSN" }) 
+    <div class="input-group-btn">
+        <button class="btn btn-block" type="submit"><i class="glyphicon glyphicon-search"></i></button>
     </div>
-    <button type="submit" class="btn btn-sm">Search</button>
+</div>
+<br />
+
+
+    <!--
+        <div class="form-group has-feedback">
+
+            @Html.TextBox("Search", null, new { @class = "form-control", placeholder = "Search by Last Name or SSN" })
+            <span class="glyphicon glyphicon-search form-control-feedback"></span>
+
+        </div>
+        -->
+    <!-- <button type="submit" class="btn btn-sm">Search</button>-->
 }
 
 

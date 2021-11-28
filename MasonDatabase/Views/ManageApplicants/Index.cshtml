@@ -4,26 +4,29 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+
+<h2>Applicants</h2>
 
 
-@using(Html.BeginForm("Index", "ManageApplicants", FormMethod.Get, new {@class = "col-md-2"}))
-            {
-                <div class="form-group">
-                    @Html.TextBox("Search", null, new { @class = "form-control", placeholder="Search by Last Name or SSN" })
-                </div>
-            
-                    <button type = "submit" class="btn btn-link">
-                        <span class="glyphicon glyphicon-search"></span>
-                    </button>
+@using (Html.BeginForm("Index", "ManageApplicants", FormMethod.Get, new { @class = "col-md-3" }))
+{
+<div class="input-group">
 
-            }
+    @Html.TextBox("Search", null, new { @class = "form-control ", placeholder = "Last Name or SSN" })
+   
+    <div class="input-group-btn">
+        <button class="btn btn-block" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+    </div>
+
+</div>
+<br />
+
 
 <table class="table">
     <tr>
 
 
-        
+
         <th>
             @Html.DisplayNameFor(model => model.ConcatName)
         </th>
@@ -34,67 +37,68 @@
         <th>
             @Html.DisplayNameFor(model => model.GPA)
         </th>
-        
+
         <th>
             @Html.DisplayNameFor(model => model.ConcatSAT)
         </th>
-        
+
         <th>
             @Html.DisplayNameFor(model => model.ConcatEnroll)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.EnrollDecision)
         </th>
-        
+
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-<tr>
+    @foreach (var item in Model)
+    {
+        <tr>
 
 
-    
-    <td>
-        @Html.DisplayFor(modelItem => item.ConcatName)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.SubmitDate)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.GPA)
-    </td>
-    
-    <td>
-        @Html.DisplayFor(modelItem => item.ConcatSAT)
-    </td>
-    
-    <td>
-        @Html.DisplayFor(modelItem => item.ConcatEnroll)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.EnrollDecision)
-    </td>
-    
-    <td>
-       
 
-        <a href="@Url.Action("Edit",  new { id = item.ID })">
-            <i class="glyphicon glyphicon-pencil" title="Edit" style="color: #006633"></i>
-            <span class="sr-only"></span> |
-        </a>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConcatName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubmitDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GPA)
+            </td>
 
-        <a href="@Url.Action("Details",  new { id = item.ID })">
-            <i class="glyphicon glyphicon-list-alt" title="Details" style="color: black"></i>
-            <span class="sr-only"></span> |
-        </a>
-        <a href="@Url.Action("Delete", null,  new { id = item.ID })">
-            <i class="glyphicon glyphicon-remove" style="color:red" title="Delete"></i>
-            <span class="sr-only"></span>
-        </a>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConcatSAT)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.ConcatEnroll)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnrollDecision)
+            </td>
+
+            <td>
 
 
-    </td>
-</tr>
-}
+                <a href="@Url.Action("Edit",  new { id = item.ID })">
+                    <i class="glyphicon glyphicon-pencil" title="Edit" style="color: #006633"></i>
+                    <span class="sr-only"></span> |
+                </a>
+
+                <a href="@Url.Action("Details",  new { id = item.ID })">
+                    <i class="glyphicon glyphicon-list-alt" title="Details" style="color: black"></i>
+                    <span class="sr-only"></span> |
+                </a>
+                <a href="@Url.Action("Delete", null,  new { id = item.ID })">
+                    <i class="glyphicon glyphicon-remove" style="color:red" title="Delete"></i>
+                    <span class="sr-only"></span>
+                </a>
+
+
+            </td>
+        </tr>
+    }
 
 </table>
