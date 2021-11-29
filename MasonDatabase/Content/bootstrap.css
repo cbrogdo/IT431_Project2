@@ -4366,7 +4366,7 @@ input[type="button"].btn-block {
     }
 
 .collapse {
-    display: inline; 
+    display: none; 
     /*changed display from none to inline*/
 }
 
