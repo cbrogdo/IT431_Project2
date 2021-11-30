@@ -82,7 +82,13 @@ namespace MasonDatabase.Controllers
                     ModelState.AddModelError("SSN", "Social Security Number must be unique.");
                     return View(application);
                 }
-                
+
+                if (DateTime.Now.AddYears(-15) < DateTime.Parse(application.DOB.ToString("MM-dd-yyyy"))) 
+                {
+                    ModelState.AddModelError("DOB", "Date of Birth must be more than 15 years ago.");
+                    return View(application);
+                }
+
                 if (application.ConcatSAT <= 1000)
                 {
                     return RedirectToAction("Rejected", "Home");
@@ -137,7 +143,7 @@ namespace MasonDatabase.Controllers
 
             if (ModelState.IsValid)
             {
-
+                /*
                 Application matchingSSN = db.Applications.Where(cm => string.Compare(cm.SSN, application.SSN, true) == 0).FirstOrDefault();
 
                 if (application == null)
@@ -150,7 +156,7 @@ namespace MasonDatabase.Controllers
                     ModelState.AddModelError("SSN", "Social Security Number must be unique.");
                     return View(application);
                 }
-
+                */
                 if (application.ConcatSAT <= 1000)
                 {
                     return RedirectToAction("Rejected", "Home");

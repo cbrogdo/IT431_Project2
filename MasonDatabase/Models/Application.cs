@@ -25,7 +25,7 @@ namespace MasonDatabase.Models
 
         [Required]
         [MaxLength(50, ErrorMessage = "Must be less than 50 characters")]
-        [RegularExpression(@"^[a-z,A-Z,-, ]*$", ErrorMessage = "Last Name must contain only letters, a hyphen, or space")]
+        [RegularExpression(@"^[a-zA-Z \-]*$", ErrorMessage = "Last Name must contain only letters, a hyphen, or space")]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
@@ -74,7 +74,7 @@ namespace MasonDatabase.Models
 
         [Required]
         [MaxLength(2, ErrorMessage = "Must be exactly 2 characters")]
-        [Display(Name = "State Abbreviation (ex. VA)")]
+        [Display(Name = "State (ex. VA)")]
         public string State { get; set; }
 
         [Required]
@@ -86,10 +86,15 @@ namespace MasonDatabase.Models
 
         [Required]
         [Display(Name = "Date of Birth")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
-        //[DataType(DataType.Date)]
-        public DateTime DOB { get; set; }
+        
+        //[Range(typeof(DateTime), "01/01/1960", "12/31/2005")]
+        
+        //[Range(typeof(DateTime), DateTime.Now.AddYears(-1).ToShortDateString(), DateTime.Today.AddYears(-15).ToShortDateString())]
 
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        
+        public DateTime DOB { get; set; }
+      
 
         [Required]
         public string Gender { get; set; }
@@ -98,12 +103,12 @@ namespace MasonDatabase.Models
         //!!!!!!!!!!!!!!!!!!!!!Working through here!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
         [Required]
-        [RegularExpression(@"^[a-z,A-Z,-, ]*$", ErrorMessage = "Name must contain letters, a hyphen, or space")]
+        [RegularExpression(@"^[a-zA-Z \-]*$", ErrorMessage = "Name must contain letters, a hyphen, or space")]
         [Display(Name = "High School Name")]
         public string SchoolName { get; set; }
 
         [Required]
-        [RegularExpression(@"^[a-z,A-Z,-, ]*$", ErrorMessage = "City must contain letters, a hyphen, or space")]
+        [RegularExpression(@"^[a-zA-Z \-]*$", ErrorMessage = "City must contain letters, a hyphen, or space")]
         [Display(Name = "High School City")]
         public string SchoolCity { get; set; }
 

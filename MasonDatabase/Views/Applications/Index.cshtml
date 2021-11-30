@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<MasonDatabase.Models.Application>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Review Applications";
 }
 
 
@@ -12,10 +12,15 @@
 
 <div class="input-group">
 
-    @Html.TextBox("Search", null, new { @class = "form-control", placeholder = "Last Name or SSN" }) 
+    @Html.TextBox("Search", null, new { @class = "form-control", placeholder = "Last Name or SSN" })
     <div class="input-group-btn">
         <button class="btn btn-block" type="submit"><i class="glyphicon glyphicon-search"></i></button>
     </div>
+    
+</div>
+<br />
+<div>
+    @Html.ActionLink("Show All Applications", "Index")
 </div>
 <br />
 
@@ -218,7 +223,7 @@
                 dateFormat: "mm/dd/yy",
                 changeMonth: true,
                 changeYear: true,
-                yearRange: "-60:+0"
+                yearRange: "-60:+2"
             });
 
         });

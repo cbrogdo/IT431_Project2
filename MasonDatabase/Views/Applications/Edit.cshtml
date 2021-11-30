@@ -1,7 +1,7 @@
 ﻿@model MasonDatabase.Models.Application
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit Submitted Applications";
 }
 
 
@@ -18,6 +18,7 @@
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     @Html.HiddenFor(model => model.ID)
     @Html.HiddenFor(model => model.SubmitDate)
+    @Html.HiddenFor(model => model.SSN)
 
     <div class="form-group">
         @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -46,8 +47,8 @@
     <div class="form-group">
         @Html.LabelFor(model => model.SSN, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.SSN, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.SSN, "", new { @class = "text-danger" })
+            @Html.DisplayFor(model => model.SSN)
+            
         </div>
     </div>
 
@@ -244,7 +245,7 @@
                 dateFormat: "mm/dd/yy",
                 changeMonth: true,
                 changeYear: true,
-                yearRange: "-60:+0"
+                yearRange: "-60:+2"
             });
 
         });

@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<MasonDatabase.Models.Application>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Manage Applicants";
 }
 
 
@@ -10,17 +10,20 @@
 
 @using (Html.BeginForm("Index", "ManageApplicants", FormMethod.Get, new { @class = "col-md-3" }))
 {
-<div class="input-group">
+    <div class="input-group">
 
-    @Html.TextBox("Search", null, new { @class = "form-control ", placeholder = "Last Name or SSN" })
-   
-    <div class="input-group-btn">
-        <button class="btn btn-block" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+        @Html.TextBox("Search", null, new { @class = "form-control ", placeholder = "Last Name or SSN" })
+
+        <div class="input-group-btn">
+            <button class="btn btn-block" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+        </div>
+
     </div>
-
-</div>
-
-<br />
+    <br />
+    <div>
+        @Html.ActionLink("Show All Applicants", "Index")
+    </div>
+    <br />
 }
 
 
