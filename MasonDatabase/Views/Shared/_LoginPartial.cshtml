@@ -11,12 +11,13 @@
                 <button type="button" class="btn navbar-btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span>
                 <span class="sr-only">Toggle Dropdown</span>
             </button>
-            <ul class="dropdown-menu" style="background-color:#006633" role="menu">
+                <ul class="dropdown-menu" style="background-color:#006633" role="menu">
 
-                <li>@Html.ActionLink("Manage Applicants", "Index", "ManageApplicants")</li>
-                <li>@Html.ActionLink("Review Applications", "Index", "Applications")</li>
-                <li>@Html.ActionLink("Major List", "Index", "Majors") </li>
-            </ul>
+                    <li>@Html.ActionLink("Manage Applicants", "Index", "ManageApplicants")</li>
+                    <li>@Html.ActionLink("Review Applications", "Index", "Applications")</li>
+                    <li>@Html.ActionLink("Major List", "Index", "Majors") </li>
+                    <li>@Html.ActionLink("Add Authorized Staff", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                </ul>
         </li>
         <ul class="nav navbar-nav navbar-right">
             <li>
@@ -31,9 +32,9 @@ else
 {
     <ul class="nav navbar-nav navbar-right">
         <ul class="nav navbar-nav navbar-right">
-            <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
-            <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-        </ul>
+       
+                <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+            </ul>
     </ul>
 }
 

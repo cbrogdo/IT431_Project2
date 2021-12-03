@@ -87,10 +87,6 @@ namespace MasonDatabase.Models
         [Required]
         [Display(Name = "Date of Birth")]
         
-        //[Range(typeof(DateTime), "01/01/1960", "12/31/2005")]
-        
-        //[Range(typeof(DateTime), DateTime.Now.AddYears(-1).ToShortDateString(), DateTime.Today.AddYears(-15).ToShortDateString())]
-
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         
         public DateTime DOB { get; set; }
